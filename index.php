@@ -10,12 +10,16 @@
     <body>
         <div class="container-sm mt-4">
             <h1 class="title"><strong>API POKEMONS</strong></h1>
-            <div class="row" id="pokemonInfo">
-                
-            <div id="pagination"></div>
+            <div class="row" id="pokemonInfo">  
+            </div>  
+        </div>
+        <div class="container">
+            <div class="row">
+            <div class="pagination d-flex justify-content-center" id="pagination"></div>
             </div>
         </div>
-        <script src="./pokeAPI.js"></script>
+        
+        <script src="./pokemonAPI.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     </body>
 </html>
