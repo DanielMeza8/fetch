@@ -12,6 +12,7 @@ background-attachment: fixed;
     width: 300px;
     height: 350px;
     margin: 20px;
+    background-color: transparent;
 }
 
 
@@ -53,13 +54,29 @@ background-attachment: fixed;
 
 .card .back{
     transform: perspective(600px) rotateY(180deg);
-    background: rgb(28, 81, 112);
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(0,0,0,1) 100%);
     padding: 15px;
     color: #f3f3f3;
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
     text-align: center;
+}
+
+.card .back::after {
+    content: "";
+    background-image: url('../img/poke2-removebg-preview.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    mix-blend-mode: overlay; /* Aplicar la mezcla de fondo */
 }
 
 .card .back h5 {

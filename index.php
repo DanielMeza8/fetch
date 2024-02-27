@@ -9,8 +9,8 @@
     </head>
     <body>
         <div class="container-sm mt-4">
-            <h1 class="title"><strong>API POKEMONS</strong></h1>
-            <div class="row" id="pokemonInfo">  
+            <h1 class="title" style="font-family: 'Times New Roman', Times, serif;"><strong>API POKEMONS</strong></h1>
+            <div class="row" id="pokemonInfo" style="background-color: transparent;">  
             </div>  
         </div>
         <div class="container">

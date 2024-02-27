@@ -4,7 +4,7 @@ const getAPIindex = (pokemon) => {
     const pokemons = document.createElement("div");
     pokemons.classList.add("col-md-4");
     pokemons.innerHTML = `
-    <div class="card border-light mb-3 mt-4">
+    <div class="card mb-3 mt-4">
         <div class="face front">
             <img src="${sprites.other["official-artwork"].front_default}" class="card-img-top" alt="...">
             <h3 class="card-title"><strong>${name}</strong></h3>
@@ -12,12 +12,12 @@ const getAPIindex = (pokemon) => {
         <div class="card-body">
             <div class="face back">
             <h5 class="card-title"><strong>${name}</strong></h5>
-            <p class="card-text">Experiencia: ${base_experience} <br/>
-            Peso: ${weight} <br/>
-            Altura: ${height} <br/>
-            Habilidades: ${abilities[0].ability.name} y ${abilities[1].ability.name} <br/>
-            Tipos: ${types[0].type.name} <br/>
-            Formas: ${forms[0].name} 
+            <p class="card-text"><strong>Experiencia:</strong> ${base_experience} <br/>
+            <strong>Peso:</strong> ${weight} <br/>
+            <strong>Altura:</strong> ${height} <br/>
+            <strong>Habilidades:</strong> ${abilities[0].ability.name} y ${abilities[1].ability.name} <br/>
+            <strong>Tipos:</strong> ${types[0].type.name} <br/>
+            <strong>Formas:</strong> ${forms[0].name} 
             </p>            
             </div>
         </div>
@@ -26,7 +26,7 @@ const getAPIindex = (pokemon) => {
     infoPokemons.append(pokemons);
 }
 
-const obtenerPokemons = Array.from({ length: 100 }, (_, i) => `https://pokeapi.co/api/v2/pokemon/${i + 1}`);
+const obtenerPokemons = Array.from({ length: 67 }, (_, i) => `https://pokeapi.co/api/v2/pokemon/${i + 1}`);
 
 let currentPage = 1;
 const pokemonsPerPage = 9;
@@ -71,8 +71,8 @@ const conectarAPI = (api) => {
             event.preventDefault();
             currentPage = i;
             renderPokemons(currentPage);
-            //conectarAPI(obtenerPokemons);
-            // renderPokemons;
+            conectarAPI(obtenerPokemons);
+            renderPokemons;
         });
         paginationContainer.appendChild(pageLink);
     }
